@@ -1,0 +1,39 @@
+CREATE TABLE employees(
+    fname VARCHAR(4),
+    department VARCHAR(10)
+);
+
+INSERT INTO employees
+(fname, department) VALUES
+("bob","HR"),
+("pop","HR"),
+("tok","MARKETING"),
+("tik","accounting");
+--SQL query to fetch "fname" from table: employees
+--and using the alias name "workername" for "name"
+
+SELECT fname as workername
+FROM employees;
+---------------------------------------------------------
+--SQL query to fetch "fname" from table: employees
+--but you want the names in uppercase.
+
+SELECT UPPER(fname)
+FROM employees;
+---------------------------------------------------------
+--SQL query to find how many departments are in the work table
+SELECT DISTINCT department
+FROM employees;
+---------------------------------------------------------
+--SQL query to print only a specific ammount of characters
+--from fname
+SELECT SUBSTRING(FNAME,1,2)
+FROM employees;
+---------------------------------------------------------
+
+
+describe employees;
+
+SELECT * FROM employees;
+
+DROP TABLE employees;
